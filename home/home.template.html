@@ -1,1 +1,54 @@
-<product-view></product-view>
+<button
+  type="button"
+  ng-click="$ctrl.addNewTodo()"
+  class="btn btn-outline-success"
+>
+  Add Todo
+</button>
+<br /><br />
+<div class="alert alert-success" role="alert" ng-if="$ctrl.alert">
+  <h4 class="alert-heading">SuccessFully {{$ctrl.alertTitle}}!</h4>
+</div>
+<table ng-if="$ctrl.tableShow">
+  <tr>
+    <th>Check</th>
+    <th>TodoName</th>
+    <th>Discription</th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat="todo in $ctrl.todoList">
+    <td>
+      <input
+        ng-click=""
+        ng-model="deleted"
+        type="checkbox"
+        id="exampleCheck1"
+      />
+    </td>
+    <td ng-class="{strike:deleted}">{{todo.todoName}}</td>
+    <td>{{todo.description}}</td>
+    <td>
+      <button
+        type="button"
+        ng-click="$ctrl.updateTodo(todo)"
+        class="btn btn-outline-primary"
+      >
+        Edit
+      </button>
+      <button
+        type="button"
+        ng-click="$ctrl.deleteTodo(todo)"
+        class="btn btn-outline-danger"
+      >
+        Delete
+      </button>
+    </td>
+  </tr>
+</table>
+
+<edit-todo
+  ng-if="$ctrl.editShow"
+  input-name="$ctrl.selectedData"
+  on-update-todo-data="$ctrl.onUpdateTodoData"
+></edit-todo>
+<add-todo ng-if="$ctrl.addShow" on-add-todo="$ctrl.onAddTodo"></add-todo>
