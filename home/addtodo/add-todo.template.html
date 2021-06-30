@@ -1,0 +1,11 @@
+<div class="editform">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Todo Name</label>
+    <input type="text" class="form-control" id="todoname" ng-model="$ctrl.todo.todoName">
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <input type="text" class="form-control" id="description" ng-model="$ctrl.todo.description">
+    </div>
+    <button type="submit" ng-click="$ctrl.sendDtatForAdd()" class="btn btn-primary">Submit</button>
+  </div>
+</div>

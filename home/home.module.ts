@@ -9,6 +9,6 @@ import { addTodoComponet } from './addtodo/add-todo.component';
 
 homeModule.component('home', HomeComponent);
 homeModule.service('homeService', HomeService);
-homeModule.component('edidtTodo', edidtTodoComponet);
+homeModule.component('editTodo', edidtTodoComponet);
 homeModule.component('addTodo', addTodoComponet);
 export { homeModule };

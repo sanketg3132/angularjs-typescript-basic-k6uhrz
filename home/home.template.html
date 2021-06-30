@@ -1,6 +1,6 @@
 <button
   type="button"
-  ng-click="$ctrl.addNewTodo()"
+  ng-click="$ctrl.showAddTodo()"
   class="btn btn-outline-success"
 >
   Add Todo
@@ -30,7 +30,7 @@
     <td>
       <button
         type="button"
-        ng-click="$ctrl.updateTodo(todo)"
+        ng-click="$ctrl.showEditTodo(todo)"
         class="btn btn-outline-primary"
       >
         Edit
@@ -46,9 +46,5 @@
   </tr>
 </table>
 
-<edit-todo
-  ng-if="$ctrl.editShow"
-  input-name="$ctrl.selectedData"
-  on-update-todo-data="$ctrl.onUpdateTodoData"
-></edit-todo>
+<edit-todo ng-if="$ctrl.editShow" todo-object="$ctrl.todoObject" on-update-todo-data="$ctrl.onUpdateTodo"></edit-todo>
 <add-todo ng-if="$ctrl.addShow" on-add-todo="$ctrl.onAddTodo"></add-todo>
