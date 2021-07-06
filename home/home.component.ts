@@ -33,6 +33,8 @@ class HomeController implements IController {
     this.editShow = false;
     this.tableShow = true;
     this.addShow = false;
+    this.alertTitle = 'updated';
+    this.alert = true;
   };
 
   public onAddTodo = todo => {
