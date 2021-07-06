@@ -1,8 +1,4 @@
-<button
-  type="button"
-  ng-click="$ctrl.showAddTodo()"
-  class="btn btn-outline-success"
->
+<button type="button" ng-click="$ctrl.showAddTodo()" class="addtodobtn">
   Add Todo
 </button>
 <br /><br />
@@ -31,14 +27,14 @@
       <button
         type="button"
         ng-click="$ctrl.showEditTodo(todo)"
-        class="btn btn-outline-primary"
+        class="edittodobtn"
       >
         Edit
       </button>
       <button
         type="button"
         ng-click="$ctrl.deleteTodo(todo)"
-        class="btn btn-outline-danger"
+        class="deletetodobtn"
       >
         Delete
       </button>
@@ -46,5 +42,9 @@
   </tr>
 </table>
 
-<edit-todo ng-if="$ctrl.editShow" todo-object="$ctrl.todoObject" on-update-todo="$ctrl.onUpdateTodo"></edit-todo>
+<edit-todo
+  ng-if="$ctrl.editShow"
+  todo-object="$ctrl.todoObject"
+  on-update-todo="$ctrl.onUpdateTodo"
+></edit-todo>
 <add-todo ng-if="$ctrl.addShow" on-add-todo="$ctrl.onAddTodo"></add-todo>

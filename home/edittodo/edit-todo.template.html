@@ -1,12 +1,15 @@
 <div class="editform">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Todo Name</label>
-    <input type="text" class="form-control" id="todoname" ng-model="$ctrl.todoObject.todoName">
-    <input type="hidden" class="form-control" id="todoid" ng-model="$ctrl.todoObject.id">
-    <div class="form-group">
-      <label for="exampleInputPassword1">Description</label>
-      <input type="text" class="form-control" id="description"  ng-model="$ctrl.todoObject.description">
+  <div>
+    <label>Todo Name</label><br />
+    <input type="text" ng-model="$ctrl.todoObject.todoName" />
+    <input type="hidden" ng-model="$ctrl.todoObject.id" />
+    <div>
+      <label>Description</label><br />
+      <input type="text" ng-model="$ctrl.todoObject.description" />
     </div>
-    <button type="submit" ng-click="$ctrl.sendEditedTodo()" class="btn btn-primary">Submit</button>
+    <br />
+    <button type="submit" ng-click="$ctrl.sendEditedTodo()" class="submitbtn">
+      Submit
+    </button>
   </div>
 </div>

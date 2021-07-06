@@ -25,3 +25,27 @@ tr:nth-child(even) {
   padding: 30px;
   margin-left: 200px;
 }
+.submitbtn {
+  background-color: #0000ff;
+  border-radius: 5px;
+  border: 1px solid;
+  color: white;
+}
+.edittodobtn {
+  background-color: blueviolet;
+  border-radius: 5px;
+  border: 1px solid;
+  color: white;
+}
+.deletetodobtn {
+  background-color: red;
+  border-radius: 5px;
+  border: 1px solid;
+  color: white;
+}
+.addtodobtn {
+  background-color: greenyellow;
+  border-radius: 5px;
+  border: 1px solid;
+  color: black;
+}
