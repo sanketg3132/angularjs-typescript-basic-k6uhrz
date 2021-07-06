@@ -18,35 +18,34 @@ tr:nth-child(even) {
 .strike {
   text-decoration: line-through;
 }
+@mixin borderpro {
+  border-radius: 5px;
+  border: 1px solid;
+  color: white;
+}
 .editform {
   justify-content: center;
   width: 50%;
   border-style: solid;
   padding: 30px;
   margin-left: 200px;
+  &__submitbtn {
+    background-color: #0000ff;
+    @include borderpro;
+  }
 }
-.submitbtn {
-  background-color: #0000ff;
-  border-radius: 5px;
-  border: 1px solid;
-  color: white;
-}
+
 .edittodobtn {
   background-color: blueviolet;
-  border-radius: 5px;
-  border: 1px solid;
-  color: white;
+  @include borderpro;
 }
 .deletetodobtn {
   background-color: red;
-  border-radius: 5px;
-  border: 1px solid;
-  color: white;
+  @include borderpro;
 }
 .addtodobtn {
   background-color: greenyellow;
-  border-radius: 5px;
-  border: 1px solid;
+  @include borderpro;
   color: black;
 }
 .allalert {
