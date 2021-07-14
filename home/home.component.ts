@@ -53,6 +53,9 @@ class HomeController implements IController {
     }
     this.alertTitle = 'Deleted';
     this.alert = true;
+    if (this.todoList.length === 0) {
+      this.showTodoList = false;
+    }
   }
 }
 
