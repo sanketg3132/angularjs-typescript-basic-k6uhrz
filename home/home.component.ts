@@ -2,9 +2,9 @@ import { IComponentOptions, IController } from 'angular';
 import { HomeService } from './home.service';
 
 class HomeController implements IController {
-  private tableShow: boolean = true;
-  private editShow: boolean = false;
-  private addShow: boolean = false;
+  private showTodoList: boolean = true;
+  private showEditForm: boolean = false;
+  private showAddForm: boolean = false;
   private alertTitle: string;
   private alert: boolean = false;
 
@@ -17,30 +17,30 @@ class HomeController implements IController {
   }
 
   public showAddTodo() {
-    this.addShow = true;
-    this.tableShow = false;
-    this.editShow = false;
+    this.showAddForm = true;
+    this.showTodoList = false;
+    this.showEditForm = false;
   }
 
   public showEditTodo(todo: Todo) {
     this.todoObject = todo;
-    this.tableShow = false;
-    this.editShow = true;
-    this.addShow = false;
+    this.showTodoList = false;
+    this.showEditForm = true;
+    this.showAddForm = false;
   }
 
   public onUpdateTodo = editedTodo => {
-    this.editShow = false;
-    this.tableShow = true;
-    this.addShow = false;
+    this.showEditForm = false;
+    this.showEditForm = true;
+    this.showAddForm = false;
     this.alertTitle = 'updated';
     this.alert = true;
   };
 
   public onAddTodo = todo => {
     this.homeService.addTodo(todo);
-    this.addShow = false;
-    this.tableShow = true;
+    this.showAddForm = false;
+    this.showTodoList = true;
 
     this.alertTitle = 'Added';
     this.alert = true;

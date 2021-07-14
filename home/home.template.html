@@ -5,7 +5,7 @@
 <div class="allalert" role="alert" ng-if="$ctrl.alert">
   <p>SuccessFully {{$ctrl.alertTitle}}!</p>
 </div>
-<table ng-if="$ctrl.tableShow">
+<table ng-if="$ctrl.showTodoList">
   <tr>
     <th>Check</th>
     <th>TodoName</th>
@@ -42,9 +42,5 @@
   </tr>
 </table>
 
-<edit-todo
-  ng-if="$ctrl.editShow"
-  todo-object="$ctrl.todoObject"
-  on-update-todo="$ctrl.onUpdateTodo"
-></edit-todo>
-<add-todo ng-if="$ctrl.addShow" on-add-todo="$ctrl.onAddTodo"></add-todo>
+<edit-todo ng-if="$ctrl.showEditForm" todo-object="$ctrl.todoObject" on-update-todo="$ctrl.onUpdateTodo"></edit-todo>
+<add-todo ng-if="$ctrl.showAddForm" on-add-todo="$ctrl.onAddTodo"></add-todo>
