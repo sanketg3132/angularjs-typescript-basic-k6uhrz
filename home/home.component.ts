@@ -31,7 +31,7 @@ class HomeController implements IController {
 
   public onUpdateTodo = editedTodo => {
     this.showEditForm = false;
-    this.showEditForm = true;
+    this.showTodoList = true;
     this.showAddForm = false;
     this.alertTitle = 'updated';
     this.alert = true;
